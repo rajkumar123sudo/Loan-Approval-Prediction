@@ -18,7 +18,12 @@ income = st.number_input("Applicant Income", min_value=0)
 
 co_income = st.number_input("Coapplicant Income", min_value=0)
 
-loan_amount = st.number_input("Loan Amount", min_value=0)
+loan_amount_rupees = st.number_input(
+    "Loan Amount (₹)",
+    min_value=1000
+)
+
+loan_amount = loan_amount_rupees / 1000
 
 loan_term = st.number_input("Loan Amount Term", value=360)
 
